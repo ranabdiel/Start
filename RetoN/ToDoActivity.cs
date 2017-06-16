@@ -103,11 +103,11 @@ namespace RetoN
 
         private async void btnRegistrar_ClickAsync(object sender, EventArgs e)
         {
-            string urlGit = "";
+            string urlGit = "https://github.com/ranabdiel/Xamarin_Championship_Reto_N";
             TorneoItem registro = new TorneoItem();
             registro.DeviceId = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
             registro.Email = "ranabdiel@hotmail.com";
-            //registro.Reto = "RetoN + 54d88 " + urlGit;
+            registro.Reto = "RetoN + 54d88 " + urlGit;
             await manager.SaveTaskAsync(registro);
             //Toast.MakeText(this, "Registrado Correctamente", ToastLength.Short).Show();
         }
